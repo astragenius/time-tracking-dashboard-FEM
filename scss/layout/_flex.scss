@@ -1,6 +1,13 @@
 
 @use '../abstracts/' as *;
 
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
 .profile {
     display: flex;
     align-items: center;
@@ -9,14 +16,16 @@
         display: block;
     }
 }
+.switch {
+    display: flex;
+    justify-content: space-between;
+}
 .box-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    @include breakpoint-up('mobile') {
-        display: block;
-    }
+    
 }
 
 .box-main {
@@ -28,3 +37,4 @@
         display: block;
     }
 }
+

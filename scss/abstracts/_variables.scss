@@ -1,3 +1,4 @@
+
 /* Colors */
 
 
@@ -18,6 +19,10 @@ $dark-blue: hsl(235, 46%, 20%);
 $des-blue: hsl(235, 45%, 61%);
 $pale-blue: hsl(236, 100%, 87%);
 
+
+/* fontsize */
+$font-900: clamp(2rem, 1rem + 2vw, 3.5rem);
+$font-800: clamp(1.5rem, 1rem + 2vw, 3rem);
 
 
 /* media query breakpoints */
