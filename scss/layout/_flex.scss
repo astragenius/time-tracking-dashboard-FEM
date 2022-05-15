@@ -4,15 +4,27 @@
 .profile {
     display: flex;
     align-items: center;
+    
+    @include breakpoint-up('mobile') {
+        display: block;
+    }
 }
 .box-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include breakpoint-up('mobile') {
+        display: block;
+    }
 }
 
 .box-main {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
+    @include breakpoint-up('mobile') {
+        display: block;
+    }
 }
