@@ -17,3 +17,15 @@ $very-dark-blue: hsl(226, 43%, 10%);
 $dark-blue: hsl(235, 46%, 20%);
 $des-blue: hsl(235, 45%, 61%);
 $pale-blue: hsl(236, 100%, 87%);
+
+
+
+/* media query breakpoints */
+
+$breakpoints-up: (
+    'mobile': 59.375em,
+);
+
+$breakpoints-down: (
+    'mobile': 59.3125em,
+);
