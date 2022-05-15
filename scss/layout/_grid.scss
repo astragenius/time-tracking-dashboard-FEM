@@ -1,0 +1,14 @@
+@use '../abstracts/' as *;
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(rem(200), rem(255)));
+
+    @include breakpoint-down('mobile') {
+        display: block;
+    }
+}
+
+.box-profile {
+    grid-row: 1 / span 2;
+}
