@@ -1,0 +1,39 @@
+@use '../abstracts/' as *;
+
+.box {
+    background-color: $dark-blue;
+    color: $white;
+    position: relative;
+    border-radius: 10px;
+    
+}
+
+.box-bg {
+    
+    background-color: $lime-green;
+    height: 20px;
+    width: 100%;
+    
+}
+
+.box-content {
+    
+    border-radius: 10px;
+    
+}
+
+.title {
+    font-size: rem(18);
+    font-weight: 500;
+}
+.box-main-time {
+    font-size: $font-900;
+    font-weight: 300;
+    line-height: 66px;
+}
+
+.box-footer {
+    color: $pale-blue;
+    font-size: rem(15);
+    font-weight: 400;
+}
