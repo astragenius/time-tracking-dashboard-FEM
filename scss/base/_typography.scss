@@ -1,0 +1,27 @@
+/* System Font Stack */
+@font-face {
+    font-family: system;
+    font-style: normal;
+    font-weight: 300;
+    src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+  }
+
+/* Rubik Font */
+@font-face {
+    font-family: 'Rubik';
+    src: url(/fonts/Rubik-Light.ttf) format(truetype);
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Rubik';
+    src: url(/fonts/Rubik-Medium.ttf) format(truetype);
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Rubik';
+    src: url(/fonts/Rubik-Regular.ttf) format(truetype);
+    font-weight: 500;
+    font-style: normal;
+}
