@@ -5,7 +5,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    
+    @include breakpoint-up('mobile') {
+        height: 100vh;
+    }
 }
 
 .profile {

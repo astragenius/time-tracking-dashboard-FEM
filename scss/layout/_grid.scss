@@ -3,7 +3,7 @@
 .grid-container {
     display: grid;
     grid-template-columns: repeat(4, minmax(rem(200), rem(255)));
-    
+    grid-gap: rem(30);
     @include breakpoint-down('mobile') {
         display: block;
         
