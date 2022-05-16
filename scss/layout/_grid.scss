@@ -3,9 +3,10 @@
 .grid-container {
     display: grid;
     grid-template-columns: repeat(4, minmax(rem(200), rem(255)));
-
+    
     @include breakpoint-down('mobile') {
         display: block;
+        
     }
 }
 
