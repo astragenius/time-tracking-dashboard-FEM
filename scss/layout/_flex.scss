@@ -22,6 +22,11 @@
 .switch {
     display: flex;
     justify-content: space-between;
+
+    @include breakpoint-up('mobile') {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 .box-title {
     display: flex;
