@@ -6,26 +6,28 @@
     position: relative;
     border-radius: 10px;
     
+}
+
+
+.box-bg {
+    position: relative;
+    height: 45px;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+
+
+    
     &:before {
         position: absolute;
         content: '';
         height: 20px;
         width: 20px;
-        top: 50px;
+        top: 45px;
         right: 0px;
-        border-top-right-radius: 15px;
-        box-shadow: 0 -11px 0 0 $lime-green;
+        border-top-right-radius: 14px;
+       
         background-color: transparent;
     }
-}
-
-
-.box-bg {
-    
-    background-color: $lime-green;
-    height: 45px;
-    width: 100%;
-    border-radius: 10px 10px 0 0;
     
 }
 
@@ -50,4 +52,42 @@
     color: $pale-blue;
     font-size: rem(15);
     font-weight: 400;
+}
+
+
+
+/* Box inverse border effect */
+
+.box-bg--work {
+    background-color: $orange-red;
+
+
+    &::before {
+        box-shadow: 0 -11px 0 0 $orange-red;
+    }
+}
+
+.box-bg--play {
+    background-color: $soft-blue;
+
+    &::before {
+        box-shadow: 0 -11px 0 0 $soft-blue;
+    }
+}
+
+.box-bg--study {
+    background-color: $light-red;
+
+}
+
+.box-bg--exercise {
+    background-color: $lime-green;
+}
+
+.box-bg--social {
+    background-color: $violet;
+}
+
+.box-bg--selfCare {
+    background-color: $soft-orange;
 }
