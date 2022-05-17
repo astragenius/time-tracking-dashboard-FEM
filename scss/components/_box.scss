@@ -25,7 +25,6 @@
         top: 45px;
         right: 0px;
         border-top-right-radius: 14px;
-       
         background-color: transparent;
     }
     
@@ -59,8 +58,8 @@
 /* Box inverse border effect */
 
 .box-bg--work {
-    background-color: $orange-red;
-
+    
+    background: $orange-red url(/images/icon-work.svg) no-repeat 160px;
 
     &::before {
         box-shadow: 0 -11px 0 0 $orange-red;
@@ -68,7 +67,8 @@
 }
 
 .box-bg--play {
-    background-color: $soft-blue;
+   
+    background: $soft-blue url(/images/icon-play.svg) no-repeat 160px;
 
     &::before {
         box-shadow: 0 -11px 0 0 $soft-blue;
@@ -76,18 +76,22 @@
 }
 
 .box-bg--study {
-    background-color: $light-red;
+    
+    background: $light-red url(/images/icon-study.svg) no-repeat 160px;
 
 }
 
 .box-bg--exercise {
-    background-color: $lime-green;
+    
+    background: $lime-green url(/images/icon-exercise.svg) no-repeat 160px;
 }
 
 .box-bg--social {
-    background-color: $violet;
+    
+    background: $violet url(/images/icon-social.svg) no-repeat 160px;
 }
 
 .box-bg--selfCare {
-    background-color: $soft-orange;
+    
+    background: $soft-orange url(/images/icon-self-care.svg) no-repeat 160px;
 }
