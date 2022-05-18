@@ -7,6 +7,14 @@
     border-radius: 10px;
 
     margin-bottom: rem(24);
+    transition: all 200ms ease-in;
+    cursor: pointer;
+
+
+    &:hover {
+        background-color: #33397A;
+    }
+
     
     @include breakpoint-up('mobile') {
         margin-bottom: rem(0);
@@ -50,16 +58,14 @@
     
     border-radius: 10px;
     padding: rem(20) rem(20);
-    transition: all 200ms ease-in;
-    cursor: pointer;
     
-    &:hover {
-        background-color: #33397A;
-    }
-
+    
+  
     @include breakpoint-up('mobile') {
 
-        padding: rem(29);
+       padding: rem(10) rem(20);
+     
+
     }
 }
 
