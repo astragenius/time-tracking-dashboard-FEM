@@ -9,20 +9,17 @@ const fetchData = fetch(url)
     return data;
 })
 
-const getData = () => {
+/* const getData = () => {
     
     const data = fetchData;
    
-    data.then((res) => {
-        return res.forEach(element => { showTitle(element); } );
-    })
-    data.then((res) => { 
-        return res.forEach(element => { showDay(element.timeframes); } ); 
-    })
-    
+    return data.then((res) => {
+        return res.forEach(element => { element.timeframes; } );
    
+   
+    });
 }
-
+ */
 
 
 
@@ -37,24 +34,42 @@ const mainTime = [...document.getElementsByClassName('box-main-time')];
 const boxFooter = [...document.getElementsByClassName('box-footer')];
 
 
-console.log(boxFooter)
 
-const newData = getData();
+console.log(mainTime);
 
-function showTitle(data) {
 
-   console.log(data.title)
 
+dailyBtn.addEventListener('click', showDay);
+weeklyBtn.addEventListener('click', showWeek);
+monthlyBtn.addEventListener('click', showMonth);
+
+function renderData(current, prev, index) {
+
+    console.log(mainTime[index])
 }
 
-function showDay(data) {
+function showDay() {
    
-    const newArr = []
-    newArr.push(data);
-    let dayCurrent = newArr[0].daily.current;
-    let dayPrev = newArr[0].daily.previous;
-    console.log(dayCurrent)
-    console.log(dayPrev)
+    const data = fetchData;
+    let dayPrev
+    let dayCurrent
+    
+    data.then((res) => {
+        
+        return res.forEach((element, index) => {
+            
+            dayCurrent = element.timeframes.daily.current;
+            dayPrev = element.timeframes.daily.previous;
+            
+            renderData(dayCurrent, dayPrev, index)
+
+        })
+           
+           
+      
+
+    })
+
    
    
 }
@@ -63,10 +78,8 @@ function showWeek(data) {
    
     const newArr = []
     newArr.push(data);
-    let newData = newArr[0].weekly.current;
-
-    console.log(newData)
-   
+    let newData = newArr[0].weekly.current; 
+   console.log(newData)
    
 }
 
@@ -75,9 +88,7 @@ function showMonth(data) {
     const newArr = []
     newArr.push(data);
     let newData = newArr[0].monthly.current;
-
     console.log(newData)
-   
    
 }
 
