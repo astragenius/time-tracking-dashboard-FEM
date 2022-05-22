@@ -95,7 +95,57 @@ body {
   font-family: system;
 }
 ```
+#### Invertet Border-radius
 
+![](./screenshots/invertet-border-radius.png)
+
+This is indeed a tricky design. You have an inverted - border-radius and a background image on the head of the element.
+
+```scss 
+.box-bg {
+    position: relative;
+    height: 45px;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+
+    &::before {
+        position: absolute;
+        content: '';
+        height: 20px;
+        width: 20px;
+        top: 45px;
+        right: 0px;
+        border-top-right-radius: 14px;
+        background-color: transparent;
+    }
+
+    &::after {
+        position: absolute;
+        content: '';
+        height: 20px;
+        width: 20px;
+        left: 0;
+        top: 45px;
+        border-top-left-radius: 14px;
+        background-color: transparent;
+    }
+    
+}
+
+.box-bg--work {
+    
+    background: $orange-red url(/images/icon-work.svg) no-repeat 160px;
+
+    &::before {
+        box-shadow: 0 -11px 0 0 $orange-red;
+    }
+    &::after {
+        box-shadow: 0 -11px 0 0 $orange-red;
+    }
+}
+
+
+```
 
 ### Useful resources
 
