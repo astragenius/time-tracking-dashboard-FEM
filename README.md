@@ -11,10 +11,9 @@ This is a solution to the [Time tracking dashboard challenge on Frontend Mentor]
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
+
 
 
 ## Overview
@@ -26,13 +25,12 @@ Users should be able to:
 - View the optimal layout for the site depending on their device's screen size
 - See hover states for all interactive elements on the page
 - Switch between viewing Daily, Weekly, and Monthly stats
+### Screenshots
 
-### Screenshot Desktop
+| Desktop      | Mobile |
+| ----------- | ----------- |
+| ![](./screenshots/dashboard-desktop.png)    | ![](./screenshots/dashboard%20-%20mobile.png)       |
 
-![](./screenshots/dashboard-desktop.png)
-
-### Screenshot Mobile
-![](./screenshots/dashboard%20-%20mobile.png)
 
 
 ### Links
@@ -44,66 +42,76 @@ Users should be able to:
 
 ### Built with
 
-- Semantic HTML5 markup
-- [SASS - Syntactically Awesome Style Sheets](https://sass-lang.com/)
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
+| Build With   | Guidelines that I followed| Tools that i have used|
+| -------------|---------------------------|-----------------------|
+| Semantic HTML5 markup|[MaintainableCSS](https://maintainablecss.com/chapters/semantics/)| [Modern CSS reset](https://piccalil.li/blog/a-modern-css-reset/)
+| [SASS - Syntactically Awesome Style Sheets](https://sass-lang.com/)|[SASS Guidelines](https://sass-guidelin.es/#naming-conventions)|[Fluid Typography](https://utopia.fyi/)
+| Flexbox|[HTML Best Practices](https://github.com/hail2u/html-best-practices)|[HTML Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fofficialmentor.netlify.app%2F)
+| CSS Grid|[CSS STyle Guide(Airbnb)](https://github.com/airbnb/css)|[CSS Validator](https://jigsaw.w3.org/css-validator/)
+|Mobile-first workflow||[PageSpeed Insights](https://pagespeed.web.dev/)
 
-### Guidelines that i followed
-
-- [MaintainableCSS](https://maintainablecss.com/chapters/semantics/)
-- [SASS Guidelines](https://sass-guidelin.es/#naming-conventions)
-- [HTML Best Practices](https://github.com/hail2u/html-best-practices)
-- [CSS STyle Guide(Airbnb)](https://github.com/airbnb/css)
-
-### Tools that i have used
-- [Modern CSS reset](https://piccalil.li/blog/a-modern-css-reset/)
-- [Fluid Typography](https://utopia.fyi/)
-- [HTML Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fofficialmentor.netlify.app%2F)
-- [CSS Validator](https://jigsaw.w3.org/css-validator/)
-- [PageSpeed Insights](https://pagespeed.web.dev/)
 
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+#### wrapper util class
+This wrapper utility class was really helpful to get a flexible and fluid container element that works on landscape and portrait mode and keeps the content centred.
 
-To see how you can add code snippets, see below:
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
+
 ```css
-.proud-of-this-css {
-  color: papayawhip;
-}
+    .wrapper {
+        width: 90vw;
+        width: clamp(rem(375), 90vw, rem(1440)); /* clamp allows us are more flexible container-with when we use it with viewport units */
+        margin-left: auto;
+        margin-right: auto;
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
 ```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+#### Fluid Typography
+I was using in this project the clamp() function to create fluid typography for the h1 and h3 elements, to avoid too many breakpoints to set the correct font size for all screens.
+in this example, $font-900 would grow on the widest screen 57px and on the smallest screen it would shrink to 32px.
+```css
+$font-900: clamp(2.00rem, calc(1.47rem + 2.25vw), 3.50rem);/* 32px to 56px */
+
+$font-800: clamp(1.50rem, calc(1.15rem + 1.50vw), 2.50rem);/*  */
 ```
 
+#### System Font Stack(Default Fonts)
+I was using for the first time the System font stack to provide the default font size for every OS
 
+The Default font size looks better than the browser’s default fonts. I used  @font-face property to set a font-family so it looks a lot cleaner.
+
+```css
+@font-face {
+  font-family: system;
+  font-style: normal;
+  font-weight: 300;
+  src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+}
+
+body {
+  font-family: system;
+}
+```
 
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Flexible Wrapper](https://piccalil.li/quick-tip/use-css-clamp-to-create-a-more-flexible-wrapper-utility/) - 
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Fluid typhography with CSS clamp](https://piccalil.li/tutorial/fluid-typography-with-css-clamp/) 
+- [System Font Stack (Default fonts für jedes OS)](https://css-tricks.com/snippets/css/system-font-stack/)
+- [Invertet Border-radius](https://blog.logrocket.com/how-to-create-fancy-corners-in-css/)
+
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+
+- Frontend Mentor - [@astragenius](https://www.frontendmentor.io/profile/astragenius)
 - Twitter - [@yourusername](https://www.twitter.com/yourusername)
 
 
-## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
 
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
