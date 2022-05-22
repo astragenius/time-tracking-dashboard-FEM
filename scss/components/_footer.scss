@@ -1,0 +1,19 @@
+@use '../abstracts/' as *;
+
+
+.attribution {
+    display: flex;
+    justify-content: center;
+    
+}
+.attribution p,
+a {
+    color: $white;
+    text-decoration: none;
+}
+.attribution a {
+   font-weight: bold;
+    text-transform: uppercase;
+    padding: rem(5);
+}
+

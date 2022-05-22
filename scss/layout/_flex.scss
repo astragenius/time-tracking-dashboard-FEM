@@ -7,7 +7,7 @@
     justify-content: center;
     
     @include breakpoint-up('mobile') {
-        height: 100vh;
+        height: 95vh;
     }
 }
 
