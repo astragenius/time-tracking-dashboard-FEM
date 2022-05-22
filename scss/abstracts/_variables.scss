@@ -21,8 +21,8 @@ $pale-blue: #bdc1ff;
 
 
 /* fontsize */
-$font-900: clamp(2rem, 1rem + 2vw, 3.5rem);
-$font-800: clamp(1.5rem, 1rem + 2vw, 3rem);
+$font-900: clamp(2.00rem, calc(1.47rem + 2.25vw), 3.50rem);
+$font-800: clamp(1.50rem, calc(1.15rem + 1.50vw), 2.50rem);
 
 
 /* media query breakpoints */

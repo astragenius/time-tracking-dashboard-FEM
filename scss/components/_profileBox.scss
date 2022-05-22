@@ -23,11 +23,12 @@
 
 .profile-name {
     font-style: normal;
-    
+    margin-left: rem(20);
 
     @include breakpoint-up('mobile') {
         margin-top: rem(43);
         margin-bottom: rem(60);
+        margin-left: rem(0);
     }
     
     & p {
