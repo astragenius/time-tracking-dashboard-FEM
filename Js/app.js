@@ -1,5 +1,6 @@
-
-
+const dailyBtn = document.getElementById('daily-btn');
+const weeklyBtn = document.getElementById('weekly-btn');
+const monthlyBtn = document.getElementById('monthly-btn');
 const url = '../Js/data.json';
 
 
@@ -7,29 +8,11 @@ const fetchData = fetch(url)
 .then((res) => res.json())
 .then((data) => {
     return data;
-})
-
-/* const getData = () => {
-    
-    const data = fetchData;
-   
-    return data.then((res) => {
-        return res.forEach(element => { element.timeframes; } );
-   
-   
-    });
-}
- */
+})    
 
 
 
 
-
-
-
-const dailyBtn = document.getElementById('daily-btn');
-const weeklyBtn = document.getElementById('weekly-btn');
-const monthlyBtn = document.getElementById('monthly-btn');
 
 
 
