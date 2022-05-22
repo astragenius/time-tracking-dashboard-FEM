@@ -63,20 +63,33 @@
   
     @include breakpoint-up('mobile') {
 
-       padding: rem(10) rem(20);
+       padding: rem(20);
      
 
+    }
+}
+
+.box-title {
+
+
+    @include breakpoint-up('mobile') {
+        margin-bottom: rem(24);
     }
 }
 
 .title {
     font-size: rem(18);
     font-weight: 500;
+
 }
 .box-main-time {
     font-size: $font-900;
-    font-weight: 300;
+    font-weight: bold;
     line-height: 66px;
+
+    @include breakpoint-up('mobile') {
+        margin-bottom: rem(8);
+    }
 }
 
 .box-footer {
