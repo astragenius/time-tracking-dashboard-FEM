@@ -8,8 +8,13 @@
 }
 .attribution p,
 a {
+    font-size: rem(12);
     color: $white;
     text-decoration: none;
+
+    @include breakpoint-up('mobile') {
+        font-size: rem(18);
+    }
 }
 .attribution a {
    font-weight: bold;
