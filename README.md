@@ -59,7 +59,7 @@ This wrapper utility class was really helpful to get a flexible and fluid contai
 
 
 
-```css
+```scss
     .wrapper {
         width: 90vw;
         width: clamp(rem(375), 90vw, rem(1440)); /* clamp allows us are more flexible container-with when we use it with viewport units */
@@ -72,7 +72,7 @@ This wrapper utility class was really helpful to get a flexible and fluid contai
 #### Fluid Typography
 I was using in this project the clamp() function to create fluid typography for the h1 and h3 elements, to avoid too many breakpoints to set the correct font size for all screens.
 in this example, $font-900 would grow on the widest screen 57px and on the smallest screen it would shrink to 32px.
-```css
+```scss
 $font-900: clamp(2.00rem, calc(1.47rem + 2.25vw), 3.50rem);/* 32px to 56px */
 
 $font-800: clamp(1.50rem, calc(1.15rem + 1.50vw), 2.50rem);/*  */
@@ -99,7 +99,7 @@ body {
 
 ![](./screenshots/invertet-border-radius.png)
 
-This is indeed a tricky design. You have an inverted - border-radius and a background image on the head of the element.
+This is indeed a tricky design. You have an inverted - border-radius and a background image in the head of the element.
 
 ```scss 
 .box-bg {
@@ -152,7 +152,7 @@ This is indeed a tricky design. You have an inverted - border-radius and a backg
 - [Flexible Wrapper](https://piccalil.li/quick-tip/use-css-clamp-to-create-a-more-flexible-wrapper-utility/) - 
 
 - [Fluid typhography with CSS clamp](https://piccalil.li/tutorial/fluid-typography-with-css-clamp/) 
-- [System Font Stack (Default fonts für jedes OS)](https://css-tricks.com/snippets/css/system-font-stack/)
+- [System Font Stack (Default fonts for every OS)](https://css-tricks.com/snippets/css/system-font-stack/)
 - [Invertet Border-radius](https://blog.logrocket.com/how-to-create-fancy-corners-in-css/)
 
 
